@@ -17,7 +17,7 @@ public class ATM {
         this.cash = cash;
     }
 
-    public HashMap<Bancnote, Integer> money(int ruble) {
+    public HashMap<Bancnote, Integer> getMoney(int ruble) {
         HashMap<Bancnote, Integer> result = new HashMap<>();
         for (Bancnote bancnote : Bancnote.values()) {
             int numberOfBanknotes = bancnote.getValue();
@@ -36,6 +36,6 @@ public class ATM {
 
     public static void main(String[] args) {
         ATM bancomat = new ATM(Map.of(Bancnote.ONE_THOUSAND, 2, Bancnote.ONE_HUNDRED, 3, Bancnote.FIFTY, 1));
-        System.out.println(bancomat.money(100));
+        System.out.println(bancomat.getMoney(100));
     }
 }
