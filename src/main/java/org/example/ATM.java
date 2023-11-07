@@ -31,9 +31,9 @@ public class ATM {
             return value;
         }
     }
-    HashMap<Bancnote, Integer> cash = new HashMap();
+    Map<Bancnote, Integer> cash = new HashMap();
 
-    public ATM(HashMap<Bancnote, Integer> cash) {
+    public ATM(Map<Bancnote, Integer> cash) {
         this.cash = cash;
     }
 
@@ -55,9 +55,7 @@ public class ATM {
     }
 
     public static void main(String[] args) {
-        Bancnote bancnote;
-        ATM bancomat = new ATM((HashMap<Bancnote, Integer>) Map.of(Bancnote.ONE_THOUSAND, 2, Bancnote.ONE_HUNDRED, 3, Bancnote.FIFTY, 1));
+        ATM bancomat = new ATM(Map.of(Bancnote.ONE_THOUSAND, 2, Bancnote.ONE_HUNDRED, 3, Bancnote.FIFTY, 1));
         System.out.println(bancomat.money(100));
     }
 }
-
