@@ -1,8 +1,6 @@
 package org.example;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class ATM {
@@ -13,25 +11,7 @@ public class ATM {
      * Допустимые номиналы: 50₽, 100₽, 500₽, 1000₽, 5000₽.
      */
 
-
-    public enum Bancnote {
-        FIVE_THOUSAND(5000),
-        ONE_THOUSAND(1000),
-        FIVE_HUNDRED(500),
-        ONE_HUNDRED(100),
-        FIFTY(50);
-
-        private int value;
-
-        Bancnote(int value) {
-            this.value = value;
-        }
-
-        public int getValue() {
-            return value;
-        }
-    }
-    Map<Bancnote, Integer> cash = new HashMap();
+    private final Map<Bancnote, Integer> cash;
 
     public ATM(Map<Bancnote, Integer> cash) {
         this.cash = cash;
